@@ -32,7 +32,7 @@ namespace GithubActionsLab
 
         // Implement 3 tests per operation, following a similar pattern as above
         [Test]
-        public void Add_Valid()
+        public void a()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -40,7 +40,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void s()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -48,14 +48,14 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void d()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
         [Test]
-        public void Add_Valid()
+        public void f()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -63,7 +63,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void g()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -71,14 +71,14 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void h()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
         [Test]
-        public void Add_Valid()
+        public void j()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -86,7 +86,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void k()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -94,14 +94,14 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void l()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
         [Test]
-        public void Add_Valid()
+        public void q()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -109,7 +109,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void w()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -117,7 +117,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void e()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
