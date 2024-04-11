@@ -84,7 +84,34 @@ namespace GithubActionsLab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            throw new NotImplementedException();
+            if (x == null || y == null)
+    {
+        throw new ArgumentNullException("Arguments cannot be null");
+    }
+
+    if (!double.TryParse(x, out double baseNumber) || !double.TryParse(y, out double exponent))
+    {
+        throw new FormatException("Both arguments must be numeric");
+    }
+
+    if (exponent == 0)
+    {
+        return 1; 
+    }
+    
+    double result = 1;
+    for (int i = 1; i <= Math.Abs(exponent); i++)
+    {
+        result *= baseNumber;
+    }
+
+    if (exponent < 0)
+    {
+        
+        result = 1 / result;
+    }
+
+    return result;
         }
     }
 
