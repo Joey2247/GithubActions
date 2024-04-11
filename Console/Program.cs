@@ -84,29 +84,26 @@ namespace GithubActionsLab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            if (x == null || y == null)
-    {
-        throw new ArgumentNullException("Arguments cannot be null");
-    }
+            double baseValue = double.Parse(x);
+    int exponent = int.Parse(y); // 假设指数为非负整数
+    double result = 1; // 乘方的初始结果为1
 
-    double baseNumber = double.Parse(x);
-    int exponent = int.Parse(y); 
+    // 如果指数是0，任何数的0次方都是1（假设0的0次方也返回1）
     if (exponent == 0)
     {
-        return 1; 
+        return 1;
     }
-
-    double result = 1;
-    int positiveExponent = exponent > 0 ? exponent : -exponent; 
-    for (int i = 1; i <= positiveExponent; i++)
-    {
-        result *= baseNumber;
-    }
-
+    
+    // 如果指数是负数，这里的实现不考虑，因为需要涉及到分数计算
     if (exponent < 0)
     {
-    // 对于负指数，计算其倒数
-        result = 1 / result;
+        throw new ArgumentException("Exponent must be a non-negative integer.");
+    }
+
+    // 使用循环计算乘方
+    for (int i = 0; i < exponent; i++)
+    {
+        result *= baseValue;
     }
 
     return result;
