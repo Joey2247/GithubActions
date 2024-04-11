@@ -84,34 +84,19 @@ namespace GithubActionsLab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            if (x == null || y == null)
-    {
-        throw new ArgumentNullException("Arguments cannot be null");
-    }
+            if (x == null || y == null) throw new ArgumentNullException("Arguments cannot be null");
 
-    if (!double.TryParse(x, out double baseNumber) || !double.TryParse(y, out double exponent))
-    {
-        throw new FormatException("Both arguments must be numeric");
-    }
+            double baseNumber = double.Parse(x);
+            int exponent = int.Parse(y); 
 
-    if (exponent == 0)
-    {
-        return 1; // 任何数的0次幂都是1
-    }
-    
-    double result = 1;
-    for (int i = 1; i <= Math.Abs(exponent); i++)
-    {
-        result *= baseNumber;
-    }
+            if (exponent < 0) throw new ArgumentException("Exponent cannot be negative for this implementation.");
 
-    if (exponent < 0)
-    {
-        // 负指数表示取倒数
-        result = 1 / result;
-    }
-
-    return result;
+            double result = 1;
+            for (int i = 0; i < exponent; i++)
+            {
+                result *= baseNumber;
+            }
+            return result;
         }
     }
 
